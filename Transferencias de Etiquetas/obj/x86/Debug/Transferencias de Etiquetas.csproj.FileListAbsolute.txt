@@ -1,0 +1,12 @@
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\bin\Debug\Transferencias de Etiquetas.exe
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\bin\Debug\Transferencias de Etiquetas.pdb
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias_de_Etiquetas.Properties.Resources.resources
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias de Etiquetas.csproj.GenerateResource.Cache
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias de Etiquetas.exe
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias de Etiquetas.pdb
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias_de_Etiquetas.GUIs.FrmPrincipal.resources
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias de Etiquetas.exe.licenses
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\bin\Debug\Transferencias de Etiquetas.exe.config
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias_de_Etiquetas.GUIs.FrmConfiguracion.resources
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias de Etiquetas.csprojResolveAssemblyReference.cache
+G:\Github\Transfer-Etiquetas-Friolala\Transferencias de Etiquetas\obj\x86\Debug\Transferencias_de_Etiquetas.GUIs.FrmLogin.resources

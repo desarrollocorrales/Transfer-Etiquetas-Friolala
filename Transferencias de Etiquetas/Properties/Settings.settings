@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Transferencias_de_Etiquetas.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Servidor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ServidorX</Value>
+    </Setting>
+    <Setting Name="Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">etiquetas</Value>
+    </Setting>
+    <Setting Name="Contraseña" Type="System.String" Scope="User">
+      <Value Profile="(Default)">corrales</Value>
+    </Setting>
+    <Setting Name="Puerto" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="BaseDeDatos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">seguimiento_acc</Value>
+    </Setting>
+    <Setting Name="UrlWebService" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://friolalamatriz.redesdurango.com:84/SegConFriolala/ServicioWeb.asmx</Value>
+    </Setting>
+    <Setting Name="Transferencias_de_Etiquetas_WS_Friolala_ServicioWeb" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://friolalamatriz.redesdurango.com:84/SegConFriolala/ServicioWeb.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

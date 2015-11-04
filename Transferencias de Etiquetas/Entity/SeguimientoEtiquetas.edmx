@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Etiquetas_Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Etiquetas_ModelStoreContainer">
+          <EntitySet Name="etiquetas" EntityType="Etiquetas_Model.Store.etiquetas" store:Type="Tables" Schema="seguimiento_acc" />
+          <EntitySet Name="usuarios" EntityType="Etiquetas_Model.Store.usuarios" store:Type="Tables" Schema="seguimiento_acc" />
+        </EntityContainer>
+        <EntityType Name="etiquetas">
+          <Key>
+            <PropertyRef Name="id_etiqueta" />
+          </Key>
+          <Property Name="id_etiqueta" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="numero_etiqueta" Type="varchar" MaxLength="14" />
+          <Property Name="tipo_etiqueta" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="id_proveedor" Type="int" />
+          <Property Name="id_lote" Type="uint" />
+          <Property Name="id_pedido" Type="uint" />
+          <Property Name="clave_articulo" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="fecha_empaque" Type="datetime" Nullable="false" />
+          <Property Name="fecha_caducidad" Type="datetime" Nullable="false" />
+          <Property Name="id_bodega" Type="uint" Nullable="false" />
+          <Property Name="id_usuario" Type="uint" Nullable="false" />
+          <Property Name="cantidad" Type="decimal" Nullable="false" Scale="3" />
+          <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="piezas" Type="uint" />
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="tipo_salida" Type="char" MaxLength="2" />
+          <Property Name="fecha_recepcion" Type="date" />
+          <Property Name="fecha_entrega" Type="date" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="id_area" Type="uint" Nullable="false" />
+          <Property Name="estado" Type="bit" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Etiquetas_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EtiquetasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="etiquetas" EntityType="Etiquetas_Model.etiquetas" />
+          <EntitySet Name="usuarios" EntityType="Etiquetas_Model.usuarios" />
+        </EntityContainer>
+        <EntityType Name="etiquetas">
+          <Key>
+            <PropertyRef Name="id_etiqueta" />
+          </Key>
+          <Property Name="id_etiqueta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numero_etiqueta" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_etiqueta" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="id_proveedor" Type="Int32" />
+          <Property Name="id_lote" Type="Int64" />
+          <Property Name="id_pedido" Type="Int64" />
+          <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_empaque" Type="DateTime" Nullable="false" />
+          <Property Name="fecha_caducidad" Type="DateTime" Nullable="false" />
+          <Property Name="id_bodega" Type="Int64" Nullable="false" />
+          <Property Name="id_usuario" Type="Int64" Nullable="false" />
+          <Property Name="cantidad" Type="Decimal" Nullable="false" />
+          <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="piezas" Type="Int64" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_salida" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_recepcion" Type="DateTime" />
+          <Property Name="fecha_entrega" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Type="Int32" Name="id_usuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="username" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="password" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="id_area" Nullable="false" />
+          <Property Type="Boolean" Name="estado" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Etiquetas_ModelStoreContainer" CdmEntityContainer="EtiquetasEntities">
+          <EntitySetMapping Name="etiquetas">
+            <EntityTypeMapping TypeName="Etiquetas_Model.etiquetas">
+              <MappingFragment StoreEntitySet="etiquetas">
+                <ScalarProperty Name="id_etiqueta" ColumnName="id_etiqueta" />
+                <ScalarProperty Name="numero_etiqueta" ColumnName="numero_etiqueta" />
+                <ScalarProperty Name="tipo_etiqueta" ColumnName="tipo_etiqueta" />
+                <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
+                <ScalarProperty Name="id_lote" ColumnName="id_lote" />
+                <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+                <ScalarProperty Name="clave_articulo" ColumnName="clave_articulo" />
+                <ScalarProperty Name="fecha_empaque" ColumnName="fecha_empaque" />
+                <ScalarProperty Name="fecha_caducidad" ColumnName="fecha_caducidad" />
+                <ScalarProperty Name="id_bodega" ColumnName="id_bodega" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="unidad" ColumnName="unidad" />
+                <ScalarProperty Name="piezas" ColumnName="piezas" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="tipo_salida" ColumnName="tipo_salida" />
+                <ScalarProperty Name="fecha_recepcion" ColumnName="fecha_recepcion" />
+                <ScalarProperty Name="fecha_entrega" ColumnName="fecha_entrega" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="Etiquetas_Model.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="id_area" ColumnName="id_area" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SeguimientoEtiquetas">
+        <EntityTypeShape EntityType="Etiquetas_Model.etiquetas" Width="1.5" PointX="0.75" PointY="0.75" Height="4.480205078125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Etiquetas_Model.usuarios" Width="1.5" PointX="3.375" PointY="0.75" Height="2.1725878906249996" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
